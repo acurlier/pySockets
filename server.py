@@ -1,6 +1,9 @@
 """
 server.py allows the creation of servers, that will pull the time from the atomic clock API, and will broadcast it to clients
-across a local socket connection
+across a local socket connection.
+It works across two threads:
+- The first one will periodically fetch the worldtimeapi.org API to get and parse a JSON containing the date and time
+- The second one will listen to request from clients and serve them the date it get in memory
 """
 from sys import stderr
 import requests
