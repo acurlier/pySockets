@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "socketcom"
+version = "0.1.0"
+description = ""
+authors = ["acurlier <a.curlier@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.961"
+black = {version = "^22.6.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
